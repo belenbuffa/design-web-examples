@@ -1,0 +1,123 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+body {
+	background: #F2F2F2;
+	font-family: Arial;
+}
+
+.contenedor {
+	width: 80%;
+	max-width: 700px;
+	background: #212d40;
+	height: 500px;
+
+	/*
+	flex-direction: row; 
+	flex-direction: row-reverse;
+	flex-direction: column;
+	flex-direction: column-reverse;
+	*/
+
+	/*
+	flex-wrap: no-wrap;
+	flex-wrap: wrap;
+	flex-wrap: wrap-reverse;
+	*/
+	/* combinacion de flex direction/wrap
+	flex-flow: row wrap;
+	*/
+
+	/*
+	justify-content: flex-start; //defecto
+	justify-content: flex-end;
+	justify-content: center;
+	justify-content: space-between; da espacio en el medio y alinea bien a los bordes
+	justify-content: space-around; respeta los padding
+	*/
+	
+	/* ALIGN-ITEMS -> para UNA sola FILA*/
+	/*
+	align-items: flex-start;
+	align-items: flex-end;
+	align-items: center;
+	*/
+	/*align-items: stretch; /* le quito el alto a la caja hija y se adapta al alto de la caja padre*/
+	/*align-items: baseline; /* alinea respecto a la fuente*/
+	/*align-items: flex-start;*/
+
+	/* ALIGN-CONTENT -> para MAS DE UNA FILA*/
+	/*
+	align-content: flex-start; funciona si los elementos estan en varias lineas
+	align-content: flex-end;
+	align-content: center / space-betwen / space-around;
+	*/
+	display: flex;	
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	/*align-items: center;*/
+	align-content: center;
+	
+}
+
+.caja {
+	width: 100px;
+	height: 100px;
+	background: #f79256;
+	text-align: center;
+	margin: 20px;
+	padding: 20px;
+	font-size: 40px;
+	color: #fff;
+
+	order: 1;
+	/*
+	flex-grow: 1; hacer crecer el elemento en relacion con los demas
+				1: todos los elementos abarcan todo el tamaño que necesitan 
+				   para abarcar entre todos el 100% del contenedor
+	*/
+
+	/*
+	flex-shrink: 0 
+				  habilidad de un elemento para hacerce mas pequeño en proporcion a los demas
+				  0 - no se puede hacer mas pequeño que los px que tenga
+				  por defecto todos pueden hacerce mas pequeños pero hasta cierto limite, si tienen un widht especifico, empiezan a saltar de linea sino entran
+	*/
+	flex-shrink: 1;
+	flex-grow: 1;
+	/* resumido */
+	flex: 1 1 auto; /* todos crecen y se achican en la mimsa proporcion con un tamaño automatico*/
+}
+
+/*.uno {
+	order: 3;
+}*/
+
+.dos {
+	/*order: 2;*/
+	/*width: 200px;*/
+	/*flex-basis: 200px; /* cual va a ser el tamaño inicial para un elemento, es como el width*/
+	/*flex-shrink: 1;
+	flex-grow: 1;*/
+
+	/*
+	align-self: auto;
+	align-self: flex-start;
+		se posiciona por si solo, independiente de los demas elementos en el contenedor
+	align-self: flex-end; se va solo abajo mientras los demas elementos estan arriba
+	align-self: center;*baseline: segun la fuente
+	*/
+	align-self: stretch; /*para que funcione, como es  para un unico elemento, debo ponerle alto auto*/
+	height: auto;
+}
+
+/*
+.tres {
+	order: 1;
+}*/
