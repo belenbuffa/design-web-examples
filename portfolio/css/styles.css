@@ -264,11 +264,11 @@ footer .redes-sociales {
     padding: 60px 0;
 }
 
-footer .contenedor {
+footer .redes-sociales .contenedor {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 footer .redes-sociales a {
@@ -279,17 +279,44 @@ footer .redes-sociales a {
     padding: 15px 0;
     border-radius: 3px;
     font-size: 30px;
+    margin: 10px 10px;
+    opacity: 0.9;
 }
 
-footer .redes-sociales .twitter:hover { background: #55acee; }
+footer .redes-sociales .twitter { background: #55acee; }
+footer .redes-sociales .facebook { background: #3b5998; }
+footer .redes-sociales .youtube { background: #bb0000; }
+footer .redes-sociales .instagram { background: #405de6; }
+footer .redes-sociales .github { background: #000; }
 
-footer .redes-sociales .facebook:hover { background: #3b5998; }
+footer .redes-sociales a:hover { opacity: 1;}
 
-footer .redes-sociales .youtube:hover { background: #bb0000; }
+@media screen and (max-width: 800px) {
+    header .menu {
+        text-align: center;
+    }
 
-footer .redes-sociales .instagram:hover { background: #405de6; }
+    .main .works .contenedor-works .work {
+        width: 46%;
+    }
+}
 
-footer .redes-sociales .github:hover { background: #000; }
+@media screen and (max-width: 500px) {
+    header .contenedor-texto .texto .nombre {
+        font-size: 25px;
+    }
+    
+    header .contenedor-texto .texto .profesion {
+        font-size: 16px;
+    }
 
-
+    footer .redes-sociales a {
+        width: 50px;
+        display: block;
+        padding: 8px 0;
+        border-radius: 3px;
+        font-size: 20px;
+        margin: 10px 10px;
+    }
+}
 
